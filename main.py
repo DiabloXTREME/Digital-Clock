@@ -98,8 +98,8 @@ while True:
 
     # Angles
     secondsAngle = 90 - seconds * 6
-    minutesAngle = 90 - minutes * 6
-    hoursAngle = 90 - hours * 30
+    minutesAngle = 90 - minutes * 6 + secondsAngle * 1 / 60
+    hoursAngle = 90 - hours * 30 + minutesAngle * 1 / 60
 
     # Hands
     # if previousMinute != minutes or minutesAngle == secondsAngle or minutesAngle == hoursAngle:
@@ -141,6 +141,11 @@ while True:
         minTurtle.clear()
         previousMinute = minutes
     secTurtle.clear()
+
+    # Test Data Print
+    print(str(minTurtle.heading()) + "," + str(minutesAngle) + "M\n")
+    print(str(secTurtle.heading()) + "," + str(secondsAngle) + "S \n")
+    print(str(hourTurtle.heading()) + "," + str(hoursAngle) + "H\n")
 
     # Circle Redraw
     circle.pensize(10)
