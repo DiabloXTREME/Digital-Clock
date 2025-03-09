@@ -102,24 +102,35 @@ while True:
     hoursAngle = 90 - hours * 30
 
     # Hands
-    if previousMinute != minutes or minutesAngle == secondsAngle or minutesAngle == hoursAngle:
-        minTurtle.penup()
-        minTurtle.goto(0, 0)
-        minTurtle.setheading(minutesAngle)
-        minTurtle.pendown()
-        minTurtle.forward(250)
+    # if previousMinute != minutes or minutesAngle == secondsAngle or minutesAngle == hoursAngle:
+    #     minTurtle.penup()
+    #     minTurtle.goto(0, 0)
+    #     minTurtle.setheading(minutesAngle)
+    #     minTurtle.pendown()
+    #     minTurtle.forward(250)
+
+    minTurtle.penup()
+    minTurtle.goto(0, 0)
+    minTurtle.setheading(minutesAngle)
+    minTurtle.pendown()
+    minTurtle.forward(250)
 
     secTurtle.penup()
     secTurtle.goto(0, 0)
     secTurtle.setheading(secondsAngle)
     secTurtle.pendown()
     secTurtle.forward(275)
-    if previousHour != hours or hoursAngle == minutesAngle or hoursAngle == secondsAngle:
-        hourTurtle.penup()
-        hourTurtle.goto(0, 0)
-        hourTurtle.setheading(hoursAngle)
-        hourTurtle.pendown()
-        hourTurtle.forward(200)
+    # if previousHour != hours or hoursAngle == minutesAngle or hoursAngle == secondsAngle:
+    #     hourTurtle.penup()
+    #     hourTurtle.goto(0, 0)
+    #     hourTurtle.setheading(hoursAngle)
+    #     hourTurtle.pendown()
+    #     hourTurtle.forward(200)
+    hourTurtle.penup()
+    hourTurtle.goto(0, 0)
+    hourTurtle.setheading(hoursAngle)
+    hourTurtle.pendown()
+    hourTurtle.forward(200)
 
     # Clear and Pause
     time.sleep(1)
